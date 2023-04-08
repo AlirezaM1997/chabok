@@ -15,6 +15,7 @@ const auth = {
     realtime: false,
   };
 let chabok;
+
 function App() {
   const [id, setId] = useState("");
   useEffect(() => {
@@ -24,10 +25,12 @@ function App() {
     };
     f();
   }, []);
+
   const callChabok = () => {
     chabok.login(id);
     setId("")
   };
+
   return (
     <div className="app">
       <input className="input" type="text" value={id} onChange={(e) => setId(e.target.value)} />
