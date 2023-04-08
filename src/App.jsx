@@ -26,16 +26,25 @@ function App() {
     f();
   }, []);
 
-  const callChabok = () => {
+  const loginChabok = () => {
     chabok.login(id);
     setId("")
+    console.log("successful login");
+  };
+  const logoutChabok = () => {
+    chabok.logout()
+    console.log("successful logout");
   };
 
   return (
     <div className="app">
+        <p>{"Enter id :"}</p>
       <input className="input" type="text" value={id} onChange={(e) => setId(e.target.value)} />
-      <button className="btn" onClick={() => callChabok()}>
-        {"ok"}
+      <button className="btn" onClick={() => loginChabok()}>
+        {"LOGIN"}
+      </button>
+      <button className="btn" onClick={() => logoutChabok()}>
+        {"LOGOUT"}
       </button>
     </div>
   );
