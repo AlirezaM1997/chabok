@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.app{
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px;
+  align-items: center;
+}
+.btn{
+  width: fit-content;
+  background-color: cornflowerblue;
+  outline: none;
+  margin-top: 20px;
+  padding: 8px 20px;
+  box-shadow: none;
+  border: none;
+  border-radius: 8px;
+}
+.btn:hover{
+  cursor: pointer;
+}
+.input{
+  padding: 12px;
+}
+.input:focus{
+  outline: none;
+}
